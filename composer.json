@@ -1,0 +1,32 @@
+{
+    "name": "mueva/laravel-payments",
+    "description": "Laravel package to handle recurring subscription payments",
+    "type": "library",
+    "license": "proprietary",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mueva\\Payments\\PaymentsServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Mueva\\Payments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mueva\\Payments\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.5.x-dev",
+        "orchestra/testbench": "3.5.x-dev",
+        "limedeck/phpunit-detailed-printer": "dev-master"
+    }
+}
