@@ -23,12 +23,6 @@ class CreateOwnersSubscriptions extends Migration
             $table->dateTime('expiration_date');
             $table->timestamps();
 
-            $table->foreign('owner_id')
-                ->references('id')
-                ->on('owners')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-
             $table->foreign('subscription_id')
                 ->references('id')
                 ->on('subscriptions')

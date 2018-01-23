@@ -20,12 +20,6 @@ class CreateOwnersStripeSubscriptions extends Migration
             $table->string('customer_id');
             $table->string('subscription_id');
             $table->timestamps();
-
-            $table->foreign('owner_id')
-                ->references('id')
-                ->on('owners')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
         });
     }
 

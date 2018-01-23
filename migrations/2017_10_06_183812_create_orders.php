@@ -23,12 +23,6 @@ class CreateOrders extends Migration
             $table->string('tax_type')->nullable();
             $table->decimal('total', 8, 2);
             $table->timestamps();
-
-            $table->foreign('owner_id')
-                ->references('id')
-                ->on('owners')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
         });
     }
 
