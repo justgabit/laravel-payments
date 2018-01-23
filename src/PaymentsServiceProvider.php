@@ -4,7 +4,7 @@ namespace Mueva\Payments;
 
 use Illuminate\Support\ServiceProvider;
 
-class SettingsServiceProvider extends ServiceProvider
+class PaymentsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
