@@ -13,12 +13,11 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $configFile = realpath(__DIR__ . '/../config/payments.php');
-//        $migrationPath = realpath(__DIR__ . '/../migrations/');
+        $configFile = realpath(__DIR__ . '/../config/payments.php');
 
-//        $this->publishes([$configFile => config_path('payments.php')]);
-//        $this->mergeConfigFrom($configFile, 'settings');
-//        $this->loadMigrationsFrom($migrationPath);
+        $this->publishes([$configFile => config_path('payments.php')]);
+        $this->mergeConfigFrom($configFile, 'payments');
+        $this->loadMigrationsFrom(realpath(__DIR__ . '/../migrations/'));
     }
 
     /**
