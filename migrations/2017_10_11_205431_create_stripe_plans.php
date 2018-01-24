@@ -22,7 +22,7 @@ class CreateStripePlans extends Migration
 
             $table->foreign('subscription_id')
                 ->references('id')
-                ->on('subscriptions')
+                ->on(config('payments.table_suffix') . 'subscriptions')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });

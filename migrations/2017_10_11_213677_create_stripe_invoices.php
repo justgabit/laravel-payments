@@ -31,7 +31,7 @@ class CreateStripeInvoices extends Migration
 
             $table->foreign('order_id')
                 ->references('id')
-                ->on('orders')
+                ->on(config('payments.table_suffix') . 'orders')
                 ->onUpdate('restrict')
                 ->onCascade('restrict');
         });
