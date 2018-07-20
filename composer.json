@@ -1,5 +1,5 @@
 {
-    "name": "mueva/laravel-payments",
+    "name": "justgabit/laravel-payments",
     "description": "Laravel package to handle recurring subscription payments",
     "type": "library",
     "license": "proprietary",
